@@ -18,5 +18,9 @@ div.col {
 
 div.row {
 	margin: auto;
-	width: 50%;
+}
+
+img.upvote {
+	width: 15px;
+	height: 15px;
 }
