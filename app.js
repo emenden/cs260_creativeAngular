@@ -3,13 +3,18 @@ angular.module('ToDo',[])
    '$scope', function($scope) {
 	$scope.events = [];
 	$scope.addEvent = function() {
-	  $scope.events.push({toDo: $scope.formEvent, day: $scope.formDay, checked: false});
+	  $scope.events.push({toDo: $scope.formEvent, day: $scope.formDay, checked: false, 
+				priority: $scope.formPriority});
 	  $scope.formEvent = '';
 	  $scope.formDay = '';
+	  $scope.formPriority = '';
 	  console.log($scope.events);
         };
 	$scope.doneEvent = function(event) {
 	  event.checked = true;
+	};
+	$scope.incrementPriority = function(event) {
+	  event.priority += 1;
 	};
     }
     ]);
