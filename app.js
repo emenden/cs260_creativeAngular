@@ -3,7 +3,7 @@ angular.module('ToDo',[])
    '$scope', function($scope) {
 	$scope.events = [];
 	$scope.addEvent = function() {
-	  $scope.events.push({toDo: $scope.formEvent, day: scope.formDay});
+	  $scope.events.push({toDo: $scope.formEvent, day: $scope.formDay});
 	  $scope.formEvent = '';
 	  $scope.formDay = '';
         }
