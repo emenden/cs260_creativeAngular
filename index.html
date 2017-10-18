@@ -57,6 +57,7 @@
 				<div class="row" ng-if="item.day == 'Monday'">
 					<p>Event Decription: {{item.toDo}}</p>
 					<p>Priority: {{item.priority}}</p>
+					<p>Increase Priority? <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
 					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
 			</div>
