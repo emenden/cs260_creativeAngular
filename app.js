@@ -6,6 +6,7 @@ angular.module('ToDo',[])
 	  $scope.events.push({toDo: $scope.formEvent, day: $scope.formDay});
 	  $scope.formEvent = '';
 	  $scope.formDay = '';
+	  console.log($scope.events);
         }
     }
     ]);

@@ -24,7 +24,7 @@
 			type="text"
 			class="form-control"
 			placeholder="Event Description"
-			ng-model="forEvent">
+			ng-model="formEvent">
 		</input>
       </div>
 	  
@@ -42,8 +42,8 @@
 	 
 	<h2>Monday</h2>
 	
-	 <div ng-repeat="item in items">
-		{{item.toDo}} - upvotes: {{item.day}}
+	 <div ng-repeat="item in events">
+		Day: {{item.toDo}} - Event: {{item.day}}
 	</div>
 
 </body>
