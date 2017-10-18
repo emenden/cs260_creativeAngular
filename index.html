@@ -50,43 +50,84 @@
       <button type="submit" class="btn btn-primary">Add</button>
     </form>
 	 
-	 <!--<h2>Monday</h2>
-	
-	<div ng-repeat="item in events">
-		Day: {{item.toDo}} - Event: {{item.day}} Completed? 
-		<input type="checkbox" ng-click="doneEvent(item)">
-	</div> !-->
-	
-	<table style="width:100%">
-	  <th>Monday</th>
-	  <tr ng-repeat="item in events | orderBy:'-priority'" >
-		<td ng-if="item.day == 'Monday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
-	  </tr>
-	  <th>Tuesday</th>
-	  <tr ng-repeat="item in events">
-		<td ng-if="item.day == 'Tuesday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
-	  </tr>
-	  <th>Wednesday</th>
-	  <tr ng-repeat="item in events">
-		<td ng-if="item.day == 'Wednesday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
-	  </tr>
-	  <th>Thursday</th>
-	  <tr ng-repeat="item in events">
-		<td ng-if="item.day == 'Thursday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
-	  </tr>
-	  <th>Friday</th>
-	  <tr ng-repeat="item in events">
-		<td ng-if="item.day == 'Friday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
-	  </tr>
-	  <th>Saturday</th>
-	  <tr ng-repeat="item in events">
-		<td ng-if="item.day == 'Saturday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
-	  </tr>
-	  <th>Sunday</th>
-	  <tr ng-repeat="item in events">
-		<td ng-if="item.day == 'Sunday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
-	  </tr>
-	</table>
+	<div class="tbl">
+		<div class="col"><!--Monday!-->
+			<h2>Monday</h2>
+			<div ng-repeat="item in events">
+				<div class="row" ng-if="item.day == 'Monday'">
+					<h4>Event Decription: {{item.toDo}}</h4>
+					<p>Priority: {{item.priority}}</p>
+					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col"><!--Tuesday!-->
+			<h2>Tuesday</h2>
+			<div ng-repeat="item in events">
+				<div class="row" ng-if="item.day == 'Tuesday'">
+					<h4>Event Decription: {{item.toDo}}</h4>
+					<p>Priority: {{item.priority}}</p>
+					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col"><!--Wednesday!-->
+			<h2>Wednesday</h2>
+			<div ng-repeat="item in events">
+				<div class="row" ng-if="item.day == 'Wednesday'">
+					<h4>Event Decription: {{item.toDo}}</h4>
+					<p>Priority: {{item.priority}}</p>
+					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col"><!--Thursday!-->
+			<h2>Thursday</h2>
+			<div ng-repeat="item in events">
+				<div class="row" ng-if="item.day == 'Thursday'">
+					<h4>Event Decription: {{item.toDo}}</h4>
+					<p>Priority: {{item.priority}}</p>
+					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col"><!--Friday!-->
+			<h2>Friday</h2>
+			<div ng-repeat="item in events">
+				<div class="row" ng-if="item.day == 'Monday'">
+					<h4>Event Decription: {{item.toDo}}</h4>
+					<p>Priority: {{item.priority}}</p>
+					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col"><!--Saturday!-->
+			<h2>Saturday</h2>
+			<div ng-repeat="item in events">
+				<div class="row" ng-if="item.day == 'Saturday'">
+					<h4>Event Decription: {{item.toDo}}</h4>
+					<p>Priority: {{item.priority}}</p>
+					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col"><!--Sunday!-->
+			<h2>Sunday</h2>
+			<div ng-repeat="item in events">
+				<div class="row" ng-if="item.day == 'Sunday'">
+					<h4>Event Decription: {{item.toDo}}</h4>
+					<p>Priority: {{item.priority}}</p>
+					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
