@@ -14,10 +14,15 @@ div.col {
 	width: 14%;
 	max-width: 14%;
 	vertical-align: top;
+	border-style: solid;
+	border-color: black;
 }
 
 div.row {
 	margin: auto;
+	width: 50%;
+	border-bottom-style: solid;
+        border-bottom-color: black;
 }
 
 img.upvote {

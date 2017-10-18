@@ -12,6 +12,7 @@ angular.module('ToDo',[])
         };
 	$scope.doneEvent = function(event) {
 	  event.checked = true;
+	  event.priority = 0;
 	};
 	$scope.incrementPriority = function(event) {
 	  event.priority += 1;
