@@ -1,17 +1,11 @@
 <html>	
 <head>
   <title>Weekly Planner</title>
-
-
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<link rel = "stylesheet" type="text/css" href="styles.css"/>
-
+  <link rel = "stylesheet" type="text/css" href="styles.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-
   <script src="app.js"></script>
-
-
 </head>
 <body ng-app="ToDo" ng-controller="MainCtrl">
 	<h1>Weekly Planner</h1>
@@ -30,12 +24,16 @@
       </div>
 	  
 	  <div class="form-group">
-        <input 
-			type="text"
-			class="form-control"
-			placeholder="Day i.e. Monday"
-			ng-model="formDay">
-		</input>
+		<input list="days" name="day" placeholder="Day i.e. Monday" ng-model="formDay" class="form-control">
+			<datalist id="days">
+				<option value="Monday">
+				<option value="Tuesday">
+				<option value="Wednesday">
+				<option value="Thursday">
+				<option value="Friday">
+				<option value="Saturday">
+				<option value="Sunday">
+			</datalist>
       </div>
 	  
 	  <div class="form-group">
