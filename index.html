@@ -4,6 +4,7 @@
 
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel = "stylesheet" type="text/css" href="styles.css"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
@@ -37,14 +38,55 @@
 		</input>
       </div>
 	  
+	  <div class="form-group">
+        <input 
+			type="number"
+			class="form-control"
+			placeholder="Priority. Higher number = higher priority"
+			ng-model="formPriority">
+		</input>
+      </div>
+	  
       <button type="submit" class="btn btn-primary">Add</button>
     </form>
 	 
-	<h2>Monday</h2>
+	 <!--<h2>Monday</h2>
 	
-	 <div ng-repeat="item in events">
-		Day: {{item.toDo}} - Event: {{item.day}}
-	</div>
+	<div ng-repeat="item in events">
+		Day: {{item.toDo}} - Event: {{item.day}} Completed? 
+		<input type="checkbox" ng-click="doneEvent(item)">
+	</div> !-->
+	
+	<table style="width:100%">
+	  <th>Monday</th>
+	  <tr ng-repeat="item in events | orderBy:'-priority'" >
+		<td ng-if="item.day == 'Monday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
+	  </tr>
+	  <th>Tuesday</th>
+	  <tr ng-repeat="item in events">
+		<td ng-if="item.day == 'Tuesday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
+	  </tr>
+	  <th>Wednesday</th>
+	  <tr ng-repeat="item in events">
+		<td ng-if="item.day == 'Wednesday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
+	  </tr>
+	  <th>Thursday</th>
+	  <tr ng-repeat="item in events">
+		<td ng-if="item.day == 'Thursday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
+	  </tr>
+	  <th>Friday</th>
+	  <tr ng-repeat="item in events">
+		<td ng-if="item.day == 'Friday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
+	  </tr>
+	  <th>Saturday</th>
+	  <tr ng-repeat="item in events">
+		<td ng-if="item.day == 'Saturday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
+	  </tr>
+	  <th>Sunday</th>
+	  <tr ng-repeat="item in events">
+		<td ng-if="item.day == 'Sunday'">Day: {{item.toDo}} - Event: {{item.day}} Completed? </td>
+	  </tr>
+	</table>
 
 </body>
 </html>
