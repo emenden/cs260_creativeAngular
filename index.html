@@ -55,7 +55,7 @@
 			<h2>Monday</h2>
 			<div ng-repeat="item in events">
 				<div class="row" ng-if="item.day == 'Monday'">
-					<h4>Event Decription: {{item.toDo}}</h4>
+					<p>Event Decription: {{item.toDo}}</p>
 					<p>Priority: {{item.priority}}</p>
 					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
@@ -98,7 +98,7 @@
 		<div class="col"><!--Friday!-->
 			<h2>Friday</h2>
 			<div ng-repeat="item in events">
-				<div class="row" ng-if="item.day == 'Monday'">
+				<div class="row" ng-if="item.day == 'Friday'">
 					<h4>Event Decription: {{item.toDo}}</h4>
 					<p>Priority: {{item.priority}}</p>
 					<p> Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>

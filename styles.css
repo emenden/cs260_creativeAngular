@@ -12,4 +12,11 @@ th {
 div.col {
 	display: inline-block;
 	width: 14%;
+	max-width: 14%;
+	vertical-align: top;
+}
+
+div.row {
+	margin: auto;
+	width: 50%;
 }
