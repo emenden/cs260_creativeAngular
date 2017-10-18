@@ -1,0 +1,50 @@
+<html>	
+<head>
+  <title>Weekly Planner</title>
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+
+  <script src="app.js"></script>
+
+
+</head>
+<body ng-app="ToDo" ng-controller="MainCtrl">
+	<h1>Weekly Planner</h1>
+	 
+	 <form ng-submit="addEvent()"
+      style="margin-top:30px;">
+      <h3>Add a new Event</h3>
+
+      <div class="form-group">
+        <input 
+			type="text"
+			class="form-control"
+			placeholder="Event Description"
+			ng-model="forEvent">
+		</input>
+      </div>
+	  
+	  <div class="form-group">
+        <input 
+			type="text"
+			class="form-control"
+			placeholder="Day i.e. Monday"
+			ng-model="formDay">
+		</input>
+      </div>
+	  
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+	 
+	<h2>Monday</h2>
+	
+	 <div ng-repeat="item in items">
+		{{item.toDo}} - upvotes: {{item.day}}
+	</div>
+
+</body>
+</html>
