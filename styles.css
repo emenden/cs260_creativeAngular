@@ -8,3 +8,8 @@ th, td {
 th {
     text-align: left;
 }
+
+div.col {
+	display: inline-block;
+	width: 14%;
+}
