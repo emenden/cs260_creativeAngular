@@ -10,7 +10,7 @@
 <body ng-app="ToDo" ng-controller="MainCtrl">
 	<h1>Weekly Planner</h1>
 	 
-	 <form ng-submit="addEvent()"
+    <form ng-submit="addEvent()"
       style="margin-top:30px;">
       <h3>Add a new Event</h3>
 
@@ -20,10 +20,10 @@
 			class="form-control"
 			placeholder="Event Description"
 			ng-model="formEvent">
-		</input>
+	</input>
       </div>
 	  
-	  <div class="form-group">
+      <div class="form-group">
 		<input list="days" name="day" placeholder="Day i.e. Monday" ng-model="formDay" class="form-control">
 			<datalist id="days">
 				<option value="Monday">
@@ -34,13 +34,14 @@
 				<option value="Saturday">
 				<option value="Sunday">
 			</datalist>
+		</input>
       </div>
 	  
-	  <div class="form-group">
-        <input 
+      <div class="form-group">
+        	<input 
 			type="number"
 			class="form-control"
-			placeholder="Priority. Higher number = higher priority"
+			placeholder="Priority. 1 is low."
 			ng-model="formPriority">
 		</input>
       </div>
@@ -53,10 +54,9 @@
 			<h2>Monday</h2>
 			<div ng-repeat="item in events">
 				<div class="row" ng-if="item.day == 'Monday'">
-					<p>Event Decription: {{item.toDo}}</p>
-					<p>Priority: {{item.priority}}</p>
-					<p>Increase Priority? <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
-					<p>Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+					<h4>{{item.toDo}}</h4>
+					<p>Priority: {{item.priority}} <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
+					<p>Done <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
 			</div>
 		</div>
@@ -65,10 +65,9 @@
 			<h2>Tuesday</h2>
 			<div ng-repeat="item in events">
 				<div class="row" ng-if="item.day == 'Tuesday'">
-					<h4>Event Decription: {{item.toDo}}</h4>
-					<p>Priority: {{item.priority}}</p>
-					<p>Increase Priority? <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
-					<p>Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+					<h4>{{item.toDo}}</h4>
+					<p>Priority: {{item.priority}} <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
+					<p>Done <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
 			</div>
 		</div>
@@ -77,10 +76,9 @@
 			<h2>Wednesday</h2>
 			<div ng-repeat="item in events">
 				<div class="row" ng-if="item.day == 'Wednesday'">
-					<h4>Event Decription: {{item.toDo}}</h4>
-					<p>Priority: {{item.priority}}</p>
-					<p>Increase Priority? <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
-					<p>Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+					<h4>{{item.toDo}}</h4>
+					<p>Priority: {{item.priority}} <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
+					<p>Done <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
 			</div>
 		</div>
@@ -89,10 +87,9 @@
 			<h2>Thursday</h2>
 			<div ng-repeat="item in events">
 				<div class="row" ng-if="item.day == 'Thursday'">
-					<h4>Event Decription: {{item.toDo}}</h4>
-					<p>Priority: {{item.priority}}</p>
-					<p>Increase Priority? <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
-					<p>Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+					<h4>{{item.toDo}}</h4>
+					<p>Priority: {{item.priority}} <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
+					<p>Done <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
 			</div>
 		</div>
@@ -101,10 +98,9 @@
 			<h2>Friday</h2>
 			<div ng-repeat="item in events">
 				<div class="row" ng-if="item.day == 'Friday'">
-					<h4>Event Decription: {{item.toDo}}</h4>
-					<p>Priority: {{item.priority}}</p>
-					<p>Increase Priority? <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
-					<p>Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+					<h4>{{item.toDo}}</h4>
+					<p>Priority: {{item.priority}} <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
+					<p>Done <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
 			</div>
 		</div>
@@ -113,10 +109,9 @@
 			<h2>Saturday</h2>
 			<div ng-repeat="item in events">
 				<div class="row" ng-if="item.day == 'Saturday'">
-					<h4>Event Decription: {{item.toDo}}</h4>
-					<p>Priority: {{item.priority}}</p>
-					<p>Increase Priority? <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
-					<p>Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+					<h4>{{item.toDo}}</h4>
+					<p>Priority: {{item.priority}} <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
+					<p>Done <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
 			</div>
 		</div>
@@ -125,10 +120,9 @@
 			<h2>Sunday</h2>
 			<div ng-repeat="item in events">
 				<div class="row" ng-if="item.day == 'Sunday'">
-					<h4>Event Decription: {{item.toDo}}</h4>
-					<p>Priority: {{item.priority}}</p>
-					<p>Increase Priority? <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
-					<p>Completed? <input type="checkbox" ng-click="doneEvent(item)"></p>
+					<h4>{{item.toDo}}</h4>
+					<p>Priority: {{item.priority}} <img class="upvote" ng-click="incrementPriority(item)" src="https://i.imgur.com/LMzbpSq.jpg"></p>
+					<p>Done <input type="checkbox" ng-click="doneEvent(item)"></p>
 				</div>
 			</div>
 		</div>

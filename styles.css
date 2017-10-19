@@ -10,15 +10,17 @@ th {
 }
 
 div.col {
+	text-align: center;
 	display: inline-block;
-	width: 14%;
-	max-width: 14%;
+	width: 13%;
+	max-width: 13%;
 	vertical-align: top;
-	border-style: solid;
+	border-right-style: solid;
 	border-color: black;
 }
 
 div.row {
+	text-align: center;
 	margin: auto;
 	width: 50%;
 	border-bottom-style: solid;
@@ -28,4 +30,17 @@ div.row {
 img.upvote {
 	width: 15px;
 	height: 15px;
+}
+
+body {
+	text-align: center;
+}
+
+.form-group {
+	width: 50%;
+	display: inline-block;
+}
+
+button {
+	width: 50%;
 }
